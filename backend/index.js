@@ -1,5 +1,5 @@
 import express  from "express";
-import mysql from "mysql"
+const mysql = require('mysql2')
 import cors from "cors"
 
 const app = express();
@@ -80,10 +80,8 @@ app.get("/books", (req,res)=>{
     } )
 })
 
-const PORT = 5000;
-
-app.listen(PORT, ()=>{
-    console.log(`Server running on port ${PORT}，Connect to the backend!!!!`);
-});
+app.listen(8800, ()=>{
+    console.log("Connect to the backend!!!!")
+})
 
 //npm start

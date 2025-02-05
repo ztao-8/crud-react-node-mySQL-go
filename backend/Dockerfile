@@ -12,7 +12,7 @@ RUN npm install
 COPY . .
 
 #  API port 5000 for backend
-EXPOSE 5000
+EXPOSE 8800
 
 # 运行后端服务器
 CMD ["node", "index.js"]
