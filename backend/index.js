@@ -5,10 +5,10 @@ import cors from "cors"
 const app = express();
 
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "test"
+    host: "mysql_db",
+    user: "user",
+    password: "temporary_password",
+    database: "golinksdb"
 })
 
 app.use(express.json())//return json data using the api server postman
@@ -80,9 +80,10 @@ app.get("/books", (req,res)=>{
     } )
 })
 
+const PORT = 5000;
 
-app.listen(8800, ()=>{
-    console.log("Connect to the backend!!!!")
-})
+app.listen(PORT, ()=>{
+    console.log(`Server running on port ${PORT}，Connect to the backend!!!!`);
+});
 
 //npm start
