@@ -31,7 +31,7 @@ services:
       DB_PASSWORD: temporary_password
       DB_NAME: golinksdb
     ports:
-      - "8800:8800"
+      - "8800:5000"
 
   frontend:
     build:
