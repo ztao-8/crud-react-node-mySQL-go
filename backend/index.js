@@ -1,14 +1,15 @@
 import express  from "express";
-const mysql = require('mysql2')
-import cors from "cors"
+import mysql from "mysql";
+import cors from "cors";
 
 const app = express();
 
 const db = mysql.createConnection({
-    host: "mysql_db",
+    host: "mysql",
     user: "user",
     password: "temporary_password",
-    database: "golinksdb"
+    database: "golinksdb",
+    port: 3306
 })
 
 app.use(express.json())//return json data using the api server postman
